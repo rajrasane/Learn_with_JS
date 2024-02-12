@@ -1,2 +1,4 @@
-// This is how print in JS
-// console.log("Hello World");
+
+// This is how you print anthing on console in JS
+
+console.log("Hello World");
