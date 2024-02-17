@@ -78,3 +78,29 @@ console.log(order.reverse());
 //---------------------------------------------------------------------------------------------------------------------------------------
 
 // 9) slice
+// - copies a selected portion of an array and doesn't make change in original array
+
+// for e.g
+let Names = ["Raj","Anurag","Sumit","Prathamesh"];
+console.log(Names.slice(0,3));
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// 10) splice
+// - removes/replaces/add elements in place and makes change in original array too
+
+// for e.g
+let Fruits = ["apple","banana","grapes"];
+console.log(Fruits.splice(1,1));
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// 11) sort
+// - sorts an array
+
+// for e.g
+let nums = [9,6,7,5,4,3,1,2];
+console.log(nums.sort());
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
