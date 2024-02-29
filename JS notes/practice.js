@@ -133,8 +133,8 @@
 // Qs1. Create a program that generates a random number representing a dice roll.
 // [The number should be between 1 and 6].
 
-let dice = Math.floor(Math.random()*6 + 1);
-console.log(dice);
+// let dice = Math.floor(Math.random()*6 + 1);
+// console.log(dice);
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -167,3 +167,45 @@ console.log(dice);
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
+// Write a function to create a poem'
+
+// function printpoem(){
+//     console.log("Twinkle Twinkle , Little Star");
+//     console.log("How I Wonder What You Are");
+// };
+
+// // Write a function to display a Dice
+
+// function dice_ques(){
+//     let ran = Math.floor(Math.random()*6+1);
+//     console.log(ran);
+// }
+
+// dice_ques();
+
+// Function returning average of 3 numbers
+
+// function avg(a,b,c){
+//     let average = (a+b+c)/3;
+//     console.log(average);
+// };
+
+// avg(98,86,98);
+
+// Print Multiplication table of any number using function
+
+function gettable(a){
+    for(let i = 1;i<=10;i++){
+        console.log(i*a);
+    }
+};
+
+// or we can use 
+
+function tableof(n){
+    for(i=n;i<=n*10;i+=n){
+        console.log(i);
+    }
+};
+
+tableof(5);
