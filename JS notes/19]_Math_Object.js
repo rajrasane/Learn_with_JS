@@ -12,6 +12,7 @@
 
 // Math Methods :-
 
+
 // Math.abs(n)
 // - returns absoulte value of a number , even if we enter a -ve no , it returns it back as +ve
 console.log(Math.abs(-7));
