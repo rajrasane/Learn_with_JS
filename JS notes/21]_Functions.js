@@ -88,4 +88,64 @@ function chkadult(age){
     }
 };
 
-console.log(chkadult(3))
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+//                              Function Expressions
+
+// -In this we store a function into variable 
+// -If the function has parameters , then we can mention them with variable name (whihc is holding the function)
+
+// For E.g
+
+let sum = function(a,b){
+    console.log(a+b);
+}
+
+//Calling:- sum(1,2);
+
+// - if later we want to the function , then we can do so with funcn expressions because , it is stored in variable , so we can change it's value afterward
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+//                              Higher Order Functions
+
+// - a Higher Order Functions is a function that does one or both
+
+// 1) take one or multiple function as arguments
+// 2) returns a function 
+
+// for e.g
+let msg = function mess(){
+    console.log("Welcome");
+}
+
+function multiplemsg(func,n){
+    for(let i=1;i<=n;i++){
+        func();
+    }
+}
+
+//Calling multiplemsg(msg,50);
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+//                          Returning a Higher Order Function
+
+
+// for e.g
+function checkoddoreven(request){
+    if(request=="odd"){
+        let odd = function(n){
+            console.log(!(n%2==0));
+        }
+        return odd;
+    }else if(request=="even"){
+        let even = function(n){
+            console.log(n%2==0);
+        }
+        return even;
+    }else{
+        console.log("Wrong Request");
+    }
+}
+
