@@ -174,6 +174,9 @@
 //     console.log("How I Wonder What You Are");
 // };
 
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+
 // // Write a function to display a Dice
 
 // function dice_ques(){
@@ -182,6 +185,9 @@
 // }
 
 // dice_ques();
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
 
 // Function returning average of 3 numbers
 
@@ -192,20 +198,99 @@
 
 // avg(98,86,98);
 
+//---------------------------------------------------------------------------------------------------------------------------------------
+
 // Print Multiplication table of any number using function
 
-function gettable(a){
-    for(let i = 1;i<=10;i++){
-        console.log(i*a);
+// function gettable(a){
+//     for(let i = 1;i<=10;i++){
+//         console.log(i*a);
+//     }
+// };
+
+// // or we can use 
+
+// function tableof(n){
+//     for(i=n;i<=n*10;i+=n){
+//         console.log(i);
+//     }
+// };
+
+// tableof(5);
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+
+// Create a function that returns the sum of numbers from 1 to n
+;
+
+// function sumupton(n){
+//     let sum = 0
+//     for(let i = 1;i<=n;i++){
+//         sum = sum + i;
+//     }
+//     return sum;
+// }
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Create a function that returns the concatenation of all strings in an array
+
+// function constr(arr){
+//     let ans = '' ;
+//     for(let i =0;i<=arr.length-1;i++){
+//         ans = ans + arr[i];
+//     }
+//     return ans;
+// }
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Qs1. Write a JavaScript function that returns array elements larger than a number.
+
+let arr = [1,4,3,6,5,4,6,9,8];
+let num = 5;
+
+function getelement(){
+    for(let i=1;i<=arr.length;i++){
+        if(arr[i]>num){
+        console.log(arr[i]);
+        }
     }
 };
 
-// or we can use 
 
-function tableof(n){
-    for(i=n;i<=n*10;i+=n){
-        console.log(i);
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Qs2. Write a JavaScript function to extract unique characters from a string.
+// Example: str = “abcdabcdefgggh” ans = “abcdefgh”
+
+// let str = "Banana";
+// function unqiuesort(str){
+//     let ans="";
+//     for (let i = 0; i < str.length; i++) {
+//         let currChar = str[i];
+//         if (ans.indexOf(currChar) == -1) {
+//         ans += currChar;
+//         }
+//         return ans;
+//         }
+// }
+
+// unqiuesort(str);
+
+function unqiuesort(str) {
+    let ans = ""; // Initialize an empty string to store unique characters
+    for (let i = 0; i < str.length; i++) {
+        let currChar = str[i]; // Get the current character
+        if (ans.indexOf(currChar) === -1) {
+            // If the character is not already in 'ans', add it
+            ans += currChar;
+        }
     }
-};
+    return ans;
+}
 
-tableof(5);
+let str = "banana";
+let uniqueCharacters = unqiuesort(str);
+console.log("Unique characters in '" + str + "': " + uniqueCharacters);
