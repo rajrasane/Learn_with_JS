@@ -1,9 +1,9 @@
-//                                          Methods 
+// Methods 
 
 // - Methods are the actions that can be performed on an object
 
 // for E.g
-// Making Calulator 
+// - Making Calulator 
 
 const calculator = {
     add : function(a,b){
@@ -24,7 +24,7 @@ const calculator = {
 //---------------------------------------------------------------------------------------------------------------------------------------
 
 
-//                                     Methods Shorthand
+// Methods Shorthand
 
 // for e.g
 

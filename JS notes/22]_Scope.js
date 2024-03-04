@@ -1,23 +1,23 @@
-//                                     Scope
+// Scope
 
-// It determines the accessibility of variables , objects , and functions from different parts of the code
-
-// It consist of :-
+// - It determines the accessibility of variables , objects , and functions from different parts of the code
+// - It consist of :-
 
 // Function
 // Block
 // Lexical
 
+//---------------------------------------------------------------------------------------------------------------------------------------
 
 // 1)Function Scope 
 // - Variables defined inside a function are not accessible from outside the function
 
 // For e.g
-let sum = 100; //Global Scope
+let sum = 100; //<= Global Scope
 
 function addn(a,b){
     let sum = 0;
-    sum = a + b; //Function Scope
+    sum = a + b; //<= Function Scope
     return sum;
 };
 
@@ -29,7 +29,7 @@ function addn(a,b){
 
 // For e.g
 {
-    let i = 1; //Block Scope
+    let i = 1; //<= Block Scope
 }
 
 //---------------------------------------------------------------------------------------------------------------------------------------
@@ -40,8 +40,8 @@ function addn(a,b){
 
 // For e.g
 function outfunc(){
-    let x = 5;
-    let y = 10;
+    let x = 5;  //<= Lexical Scope
+    let y = 10;  //<= Lexical Scope
     function innerfunc(){
         console.log(x+y);
     }

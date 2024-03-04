@@ -1,72 +1,79 @@
+// Function
+// - a function is a block of code which can perform a certain task , and later only after calling the function,it executes
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
 // Function Definition 
 
-//      function FuncName(){
-               // Do Something
-//      }
+ function FuncName(){
+        //Do Something;
+}
 
-
+//---------------------------------------------------------------------------------------------------------------------------------------
 
 // Function Calling
 
-//       FuncName();
+FuncName();
+
+
+// for e.g
+function helloworld(){
+    console.log("Hello World!");
+}
+
+helloworld();
+
+
+function print1to5(){
+    for(let i = 1;i<=5;i++){
+        console.log(i);
+    }
+}
+
+print1to5();
+
+
+function isadult(){
+    let age = prompt("Enter your age");
+    if(age<18){
+        console.log("You are not a Adult");
+    }else{
+        console.log("You are a Adult")
+    }
+}
+
+isadult();
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
+// Function with arguments
+
+// syntax:-
+ function fname(arg1,agr2){
+        //do something
+}
+
 // for e.g
-// function helloworld(){
-//     console.log("Hello World!");
-// }
 
-// helloworld();
+function userdtl(name,age){
+    console.log(`${name}'s ages is ${age}`);
+};
 
+userdtl("raj",18);
 
-// function print1to5(){
-//     for(let i = 1;i<=5;i++){
-//         console.log(i);
-//     }
-// }
+// for e.g
 
-// print1to5();
+function addn(a,b){
+    let sum = a+b;
+    console.log(`Addition of ${a} and ${b} is ${sum}`)
+};
 
-// function isadult(){
-//     let age = prompt("Enter your age");
-//     if(age<18){
-//         console.log("You are not a Adult");
-//     }else{
-//         console.log("You are a Adult")
-//     }
-// }
-
-// isadult();
+addn(41243,54345)
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
-//                       Function with arguments
+// Return Keyword 
 
-//  function fname(arg1,agr2){
-        // do something
-// }
-
-// for e.g
-
-// function yourname(name,age){
-//     console.log(`${name}'s ages is ${age}`);
-// };
-
-// yourname("raj",18);
-
-// for e.g
-
-// function addn(a,b){
-//     let sum = a+b;
-//     console.log(`Addition of ${a} and ${b} is ${sum}`)
-// };
-
-// addn(41243,54345)
-
-//---------------------------------------------------------------------------------------------------------------------------------------
-
-//                        Return Keyword 
 
 // - Anything after the return statement will not be executed
 
@@ -90,10 +97,11 @@ function chkadult(age){
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
-//                              Function Expressions
+// Function Expressions
+
 
 // -In this we store a function into variable 
-// -If the function has parameters , then we can mention them with variable name (whihc is holding the function)
+// -If the function has parameters , then we can mention them with variable name (which is holding the function)
 
 // For E.g
 
@@ -103,13 +111,14 @@ let sum = function(a,b){
 
 //Calling:- sum(1,2);
 
-// - if later we want to the function , then we can do so with funcn expressions because , it is stored in variable , so we can change it's value afterward
+// - if later we want to change the function , then we can do so with function expressions because , it is stored in variable , so we can change it's value afterward
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
-//                              Higher Order Functions
+// Higher Order Functions
 
-// - a Higher Order Functions is a function that does one or both
+
+// - a Higher Order Functions is a function that does one or both from below
 
 // 1) take one or multiple function as arguments
 // 2) returns a function 
@@ -125,11 +134,11 @@ function multiplemsg(func,n){
     }
 }
 
-//Calling multiplemsg(msg,50);
+//Calling:- multiplemsg(msg,50);
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
-//                          Returning a Higher Order Function
+// Returning a Higher Order Function
 
 
 // for e.g

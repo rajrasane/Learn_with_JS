@@ -1,5 +1,7 @@
 // The Math object contains properties and methods for mathematical constants and functions.
 
+//---------------------------------------------------------------------------------------------------------------------------------------
+
 // Math Properties :-
 
 
@@ -9,6 +11,7 @@
 // Math.PI
 // Ratio of a circle's circumference to its diameter; approximately 3.14159.
 
+//---------------------------------------------------------------------------------------------------------------------------------------
 
 // Math Methods :-
 
@@ -34,6 +37,7 @@ console.log(Math.ceil(5.3535434323));
 // - Generates a Random Number between 0 - 1 (we get decimal value of 0 , except 1)
 console.log(Math.random());
 
+//---------------------------------------------------------------------------------------------------------------------------------------
 
 // Generatig Random Integer Numbers from 1 to 10
 
@@ -49,3 +53,5 @@ console.log(numb);
 
 let num = Math.floor(Math.random()*5+21);
 console.log(num);
+
+//---------------------------------------------------------------------------------------------------------------------------------------

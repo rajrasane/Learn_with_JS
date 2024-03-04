@@ -1,6 +1,7 @@
 // this Keyword
 
 // - this keyword refers to an object that is executing the current piece of code
+// - if we didn't use 'this' keyword , error - not defined will occur
 
 // for e.g
 const student = {
