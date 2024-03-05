@@ -158,3 +158,20 @@ function checkoddoreven(request){
     }
 }
 
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Default Parameters
+
+// - in this we pass arguments directly at the time of declaring , while calling even if we don't pass anything , it considers arguments which we passed 
+
+// for e.g
+function sum12 (a,b=2){
+    return a+b;
+};
+sum12(2,4); // o/p:- 6
+sum12(1); // o/p:- 3
+
+function sum04(a=2,b){
+    return a+b;
+};
+sum04();// o/p:- undefined
