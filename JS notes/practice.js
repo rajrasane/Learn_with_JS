@@ -291,6 +291,59 @@ function unqiuesort(str) {
     return ans;
 }
 
-let str = "banana";
-let uniqueCharacters = unqiuesort(str);
-console.log("Unique characters in '" + str + "': " + uniqueCharacters);
+// let str = "banana";
+// let uniqueCharacters = unqiuesort(str);
+// console.log("Unique characters in '" + str + "': " + uniqueCharacters);
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// write an arrow function that returns the square of a number 'n'
+
+let sqrn = (n) => (n*n);
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// write a arrow function that prints Hello World 5 times at intervals of 2s each
+
+// let Id = setInterval(()=>{
+//     console.log("Hello World!");
+// },2000);
+
+// setTimeout(()=>{
+//     clearInterval(Id);
+//     console.log("Clear Interval Used!");
+// },11000);
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Qs3. Write a JavaScript function that accepts a list of country names as input and 
+// returns the longest country name as output
+
+// let countries = ["India","USA"];
+// function largestcountry (countries) {
+//     for(let i = 1;i<=countries.length-1;i++){
+        
+//     }
+// }
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// check if all numbers in our array are multiples of 10 or not
+
+let ourarray = [10,20,30,40];
+let ans = ourarray.every((el)=> el%10==0);
+console.log(ans);
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// create a function to find minimum number in an array 
+
+let minarrel = [2,3,5,3,10].reduce((min,el)=>{
+    if(el<min){
+        return el;
+    }else{
+        return min;
+    }
+});
+
+console.log(minarrel);
