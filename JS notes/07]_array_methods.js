@@ -104,3 +104,135 @@ console.log(nums.sort());
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
+// 12) foreach
+// - This method executes a provided function once for each array element
+
+// syntax:-
+// arrayName.forEach(some function definition or name);
+
+// for e.g
+let arr = [1,2,3,4,5];
+let print = function (el){
+    console.log(el);
+};
+arr.forEach(print);
+// or
+arr.forEach((el)=>{
+    console.log(el);
+});
+// using object
+let arr04 = [{
+    sname : "Raj",
+    marks : 9.55
+},
+{
+    sname : "Om",
+    marks : 9.18
+},
+{
+    sname : "Onkar",
+    marks : 9.00
+}];
+arr04.forEach((stud)=>{
+    console.log(stud.sname);
+});
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// 13) map
+// This method is similar to forEach method but it creates a new array populated with the results of calling a provided function on every element in the calling array.
+
+// syntax:-
+// let newArray = Arr.map(some function definition or name);
+
+// for e.g
+let arr9 = [2,4,6,8];
+let arr10 = arr9.map(
+    (el)=>{
+        return el*2;
+    }
+);
+
+let students = [{
+    name : "Vishal",
+    marks : 87
+},{
+    name : "Anurag",
+    marks : 86
+}]
+let studwithGPA = students.map((el)=>{
+    return el.marks/10;
+});
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// 14) filter
+// - This method creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that satisfy the condition i.e true
+
+// syntax:-
+// let newArray = Arr.filter(some function definition or name);
+
+// for e.g
+let numbs = [1,2,3,4,5,6,7,8,9,10];
+let evennumbs = numbs.filter((el)=>{
+    return el % 2 == 0; //<- here even = true and odd = false
+});
+
+let oddnumbs = numbs.filter((el)=>{
+    return el % 2 != 0; //<- here odd = true and even = false
+});
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// 15) every 
+// - returns true if every element of array gives true for some function . Else returns false
+// -  It doesn't modify the array.
+
+// syntax:-
+// arr.every(some function definition or name);
+
+// for e.g
+let n = [2,4,6,8,10];
+n.every((el)=>{
+    return el%2==0;
+});
+// o/p :- true
+
+[1,2,4,5,6,8,10].every((el)=> el%2==0 );
+// o/p :- false
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// 16) some
+// - tests whether at least one element in the array passes the test implemented by the provided function. It returns true if, in the array, it finds an element for which the provided function returns true; otherwise it returns false.
+// -  It doesn't modify the array.
+
+// syntax:-
+// arr.some(any function definition or name);
+
+// for e.g
+[1,23,4,5,6,7].some((el)=>el%2!=0);
+// o/p :- true
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// 17) reduce
+// this method combines elements of an array into a single value using a user-defined operation
+
+let ans = [1,2,3,4].reduce((res,el)=>(res+el)); //<- here initially res is 0 , and later el's value is assigned after 1 iteration
+console.log(ans);
+// o/p:- 10
+
+//- creating a function which returns a maximum value in the array using reduce
+let a = [2,4,6,8,5,3,6,9,8,23];
+let result = a.reduce((max,el)=>{
+    if(el>max){
+        return el;
+    }else{
+        return max;
+    }
+});
+console.log(result);
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
