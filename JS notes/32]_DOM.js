@@ -71,3 +71,6 @@ document.querySelector('.oldImg'); // selects first element with class = olImg
 document.querySelector("h1"); // selects all h1 elements 
 
 document.querySelectorAll("div a"); // selects all anchors inside the div and returns a nodelist
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
