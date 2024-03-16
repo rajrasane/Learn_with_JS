@@ -1,8 +1,8 @@
-// let movies = ['avatar','transformers','avengers'];
+let movies = ['avatar','transformers','avengers'];
 
-// for(let i = movies.length-1;i>=0;i--){
-//     console.log(i,movies[i]);
-// }
+for(let i = movies.length-1;i>=0;i--){
+    console.log(i,movies[i]);
+}
 
 
 // Nested Loops with Nested Arrays
