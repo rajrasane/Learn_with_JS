@@ -29,7 +29,7 @@ console.log(newstr);
 // - converts whole string characters to lowercase 
 
 // for e.g
-let str1 = "lowercase method";
+let str1 = "Lowercase Method";
 let newstr1 = str1.toLowerCase();
 console.log(newstr1);
 
