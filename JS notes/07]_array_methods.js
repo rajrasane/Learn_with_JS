@@ -1,4 +1,5 @@
 // * Array 
+
 // - an array variable can consist of dfferent datatype values
 // - arrays are mutable in javascript
 
