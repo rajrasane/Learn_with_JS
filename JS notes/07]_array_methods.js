@@ -54,7 +54,7 @@ console.log(arr5.indexOf("Python"));
 
 // 6) Includes
 // - search for a value if exist or not in array
-
+// - returns true or false according to situation
 // for e.g
 let arr6 = ["Pineapple","Banana"];
 console.log(arr6.includes("Banana"));
@@ -71,6 +71,7 @@ console.log(arr6.includes("Banana"));
 
 // 8) reverse
 // - reverses an array
+// - makes change in original array
 
 // for e.g
 let order = [5,4,3,2,1];
@@ -80,15 +81,18 @@ console.log(order.reverse());
 
 // 9) slice
 // - copies a selected portion of an array and doesn't make change in original array
+// - we startpoint and endpoint as Index , remember that endpoint's element is not included while returning array
 
 // for e.g
 let Names = ["Raj","Anurag","Sumit","Prathamesh"];
 console.log(Names.slice(0,3));
+// o/p:- ["Raj","Anurag","Sumit"]
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
 // 10) splice
-// - removes/replaces/add elements in place and makes change in original array too
+// - removes/replaces/add elements in place
+// - makes changes in original array 
 
 // for e.g
 let Fruits = ["apple","banana","grapes"];
@@ -98,6 +102,7 @@ console.log(Fruits.splice(1,1));
 
 // 11) sort
 // - sorts an array
+// - makes changes in original array after usage
 
 // for e.g
 let nums = [9,6,7,5,4,3,1,2];
