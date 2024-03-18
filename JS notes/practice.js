@@ -246,60 +246,9 @@
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
-// Qs1. Write a JavaScript function that returns array elements larger than a number.
-
-let arr = [1,4,3,6,5,4,6,9,8];
-let num = 5;
-
-function getelement(){
-    for(let i=1;i<=arr.length;i++){
-        if(arr[i]>num){
-        console.log(arr[i]);
-        }
-    }
-};
-
-
-//---------------------------------------------------------------------------------------------------------------------------------------
-
-// Qs2. Write a JavaScript function to extract unique characters from a string.
-// Example: str = “abcdabcdefgggh” ans = “abcdefgh”
-
-// let str = "Banana";
-// function unqiuesort(str){
-//     let ans="";
-//     for (let i = 0; i < str.length; i++) {
-//         let currChar = str[i];
-//         if (ans.indexOf(currChar) == -1) {
-//         ans += currChar;
-//         }
-//         return ans;
-//         }
-// }
-
-// unqiuesort(str);
-
-function unqiuesort(str) {
-    let ans = ""; // Initialize an empty string to store unique characters
-    for (let i = 0; i < str.length; i++) {
-        let currChar = str[i]; // Get the current character
-        if (ans.indexOf(currChar) === -1) {
-            // If the character is not already in 'ans', add it
-            ans += currChar;
-        }
-    }
-    return ans;
-}
-
-// let str = "banana";
-// let uniqueCharacters = unqiuesort(str);
-// console.log("Unique characters in '" + str + "': " + uniqueCharacters);
-
-//---------------------------------------------------------------------------------------------------------------------------------------
-
 // write an arrow function that returns the square of a number 'n'
 
-let sqrn = (n) => (n*n);
+// let sqrn = (n) => (n*n);
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -330,20 +279,180 @@ let sqrn = (n) => (n*n);
 
 // check if all numbers in our array are multiples of 10 or not
 
-let ourarray = [10,20,30,40];
-let ans = ourarray.every((el)=> el%10==0);
-console.log(ans);
+// let ourarray = [10,20,30,40];
+// let ans = ourarray.every((el)=> el%10==0);
+// console.log(ans);
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
 // create a function to find minimum number in an array 
 
-let minarrel = [2,3,5,3,10].reduce((min,el)=>{
-    if(el<min){
-        return el;
-    }else{
-        return min;
-    }
-});
+// let minarrel = [2,3,5,3,10].reduce((min,el)=>{
+//     if(el<min){
+//         return el;
+//     }else{
+//         return min;
+//     }
+// });
 
-console.log(minarrel);
+// console.log(minarrel);
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Qs1. Write a JavaScript function that returns array elements larger than a number.
+
+// let arr = [1,4,3,6,5,4,6,9,8];
+// let num = 5;
+
+// function getelement(){
+//     for(let i=1;i<=arr.length;i++){
+//         if(arr[i]>num){
+//         console.log(arr[i]);
+//         }
+//     }
+// };
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Qs2. Write a JavaScript function to extract unique characters from a string.
+// Example: str = “abcdabcdefgggh” ans = “abcdefgh”
+
+// let str = "papaya";
+// let ans = "";
+// for(let i = 0;i<=str.length-1;i++){
+//     currentchar=str[i];
+//     if(ans.indexOf(currentchar)==-1){
+//         ans = ans + currentchar;
+//     }
+// };
+// console.log(`Unique characters in above string are ${ans}`);
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Qs3. Write a JavaScript function that accepts a list of country names as input and 
+// returns the longest country name as output.
+// Example : country = ["Australia", "Germany", "United States of America"] output : 
+// "United States of America"
+
+// let country = ["Australia", "India", "United States of America"];
+
+// function longestName(country){
+//     let ansIndex = 0;
+//     for(let i = 0;i<=country.length-1;i++){
+//         let anslen = country[ansIndex].length;
+//         let currlen = country[i].length;
+//         if(currlen>anslen){
+//             ansIndex = i;
+//         }
+//     }
+//     return country[ansIndex];
+// };
+// longestName(country);
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Qs4. Write a JavaScript function to count the number of vowels in a String 
+// argument.
+
+// let str = "Elon Musk";
+
+// function countvowel(){
+//     let count=0;
+//     for(let i = 0;i<=str.length;i++){
+//         if(
+//             str.charAt(i)=="a" || str.charAt(i)=="A" ||
+//             str.charAt(i)=="e" || str.charAt(i)=="E" ||
+//             str.charAt(i)=="i" || str.charAt(i)=="I" ||
+//             str.charAt(i)=="o" || str.charAt(i)=="O" ||
+//             str.charAt(i)=="u" || str.charAt(i)=="U" 
+//         ){
+//             count++;
+//         }
+//     }
+//     return count;
+// };
+
+// let op = countvowel();
+
+// console.log(op);
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Qs5. Write a JavaScript function to generate a random number within a range 
+// (start, end).
+
+// let start = 100;
+// let end = 200;
+// function generateRandom(start, end) {
+// let diff = end - start;
+// return Math.floor(Math.random() * diff) + start;
+// };
+
+// let op = generateRandom(start,end);
+// console.log(op);
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Questions Part 7
+
+// Qs1. Write a arrow function named arrayAverage that accepts array of numbers and returns the average of those numbers
+
+// let nums = [40,48,49,46,50]
+// let arrayAverage = (nums) => {
+//     let sum = 0;
+//     for(let number of nums){
+//         sum += number;
+//     }
+//     let ans = sum/nums.length;
+//     console.log(`Average is ${ans}`);
+// };
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Qs2. Write an arrow function named isEven() that takes a single number as argument and returns if it is even or not
+
+// let isEven = (n) => {
+//     if(n%2==0){
+//         console.log(`${n} is a Even Number`);
+//     }else{
+//         console.log(`${n} is Not a Even Number`);
+//     }
+// };
+
+// isEven(5);
+
+// or
+
+// const isEven = (n) => n%2==0;
+// isEven(2);
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Guess Output
+
+// const object = {
+//     msg : 'Hello World!',
+//     logmsg(){
+//         console.log(this.msg);
+//     }
+// };
+
+// let length = 4;
+// function callback(){
+//     console.log(this.length);
+// }
+// const object = {
+//     length : 5,
+//     method(callback){
+//         callback();
+//     }
+// };
+// object.method(callback,1,2);
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Part 8 Questions
+
+// Qs1. Square and sum the array elements using the arrow function and then find the
+// average of the array.
+
