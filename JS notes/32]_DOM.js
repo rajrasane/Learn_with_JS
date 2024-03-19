@@ -74,3 +74,75 @@ document.querySelectorAll("div a"); // selects all anchors inside the div and re
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
+// * Setting Content in Objects 
+
+// Properties and Method :-
+
+// 1) innerText - Shows the visible text contained in a node/screen
+// 2) innerHTML - Shows the full markup i.e shows which tags we used in our HTML file 
+// 3) textContent - Shows all the full text as it is as we wrote in our HTML file 
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// * Manipulating Attributes
+
+// Syntax :-
+
+// obj.getAttribute(attr) <- This is called getters in JS
+// obj.setAttribute(attr,val) <- This is called setters in JS
+
+// for e.g
+
+// let simg = document.querySelector('img');
+// simg.getAttribute('id'); o/p:- we will get the id name
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// * Manipulating Style (with use of style attribute)
+
+// for e.g
+// let head = document.querySelector('h1');
+// head.style.color = 'red';
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// * Manipulating Style (with using classList)
+
+// syntax :-
+// object.classList; <- displays list of classes assigned to a tag
+// object.classList.add('classname'); <- adds a class to a tag
+// object.classList.remove('classname'); <- removes a class to a tag
+// object.classList.contains('classname'); <- checks if class exists , returns true or false accordingly
+// object.classList.toggle('classname'); <- to toggle between add and remove
+
+// let head = document.querySelector('h1');
+// head.classList.add("green") <- in this we apply css properties to class in CSS file and later add that class to the tag , then the css properties automatically applies too
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// * Navigation on Page 
+
+// 1) parentElement 
+// 2) children
+// 3) previousElementSibling/nextElementSibling
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// * Adding elements on a Page
+
+// syntax:-
+document.createElement('p');
+
+// - after creating a element in JS , for it to show on our page , we must first insert it
+
+// • append(element) <- can use to make changes in the created element
+// • appendChild(element) <- adds created element to a parent like body,div .etc in the end
+// • prepend(element) <- adds created element to a parent like body,div .etc at the start
+// • insertAdjacent(where,element) <- can add created element to exact location we want , read this :- https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// * Removing elements on a Page
+
+// • removeChild(element)
+// • remove(element)
