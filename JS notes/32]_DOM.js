@@ -11,8 +11,8 @@
 // 'document' object in JS
 
 // - it is a in-build object in JS , which represents the HTML code of the file it is linked to and converts all elements of the HTML file to objects 
-// - we only get HTML code by using 'console.log(document);'
-// - so we use 'console.dir(document);' to get it's HTML code with the CSS properties 
+// - we only get HTML code by using 'console.log(document)'
+// - so we use 'console.dir(document)' to get it's HTML code with its properties 
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -29,7 +29,7 @@
 
 // 1) Selecting Elements 
 
-// • getElementById
+// • getElementById()
 // - returns the element as an object or null (if not found)
 // - returns null if entered Id is invalid
 
@@ -39,7 +39,8 @@ console.log(imgObj); // this will give us the tag
 console.dir(imgObj); // this will give us the the img as a object
 
 
-// • getElementByClassName
+
+// • getElementByClassName()
 // - returns the element as an HTML collection or empty collection (if not found)
 // - return a object having length 0 if entered classname is invalid
 
@@ -51,16 +52,17 @@ for(let i = 0;i<smallimages.length;i++){
 };
 
 
-// • getElementByTagName
+
+// • getElementByTagName()
 // - returns the elements as HTML Collection or empty collection (if not found)
 
 // for e.g
 let parachange = document.getElementsByTagName("h2")[1].innerText="Creation"; //before :- Creation and Development
 console.dir(parachange); //after :- Creation
 
-//---------------------------------------------------------------------------------------------------------------------------------------
 
-// • Query Selectors 
+
+// • querySelector()
 // - Allows us to use any CSS selector 
 
 // for e.g
@@ -84,7 +86,9 @@ document.querySelectorAll("div a"); // selects all anchors inside the div and re
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
-// * Manipulating Attributes
+// 2) Manipulating Elements 
+
+// • Manipulating Attributes
 
 // Syntax :-
 
@@ -96,17 +100,17 @@ document.querySelectorAll("div a"); // selects all anchors inside the div and re
 // let simg = document.querySelector('img');
 // simg.getAttribute('id'); o/p:- we will get the id name
 
-//---------------------------------------------------------------------------------------------------------------------------------------
 
-// * Manipulating Style (with use of style attribute)
+
+// • Manipulating Style (with use of style attribute)
 
 // for e.g
 // let head = document.querySelector('h1');
 // head.style.color = 'red';
 
-//---------------------------------------------------------------------------------------------------------------------------------------
 
-// * Manipulating Style (with using classList)
+
+// • Manipulating Style (with using classList)
 
 // syntax :-
 // object.classList; <- displays list of classes assigned to a tag
@@ -120,7 +124,7 @@ document.querySelectorAll("div a"); // selects all anchors inside the div and re
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
-// * Navigation on Page 
+// Navigation on Page 
 
 // 1) parentElement 
 // 2) children
@@ -148,3 +152,77 @@ document.createElement('p');
 // • remove(element)
 
 //---------------------------------------------------------------------------------------------------------------------------------------
+
+//  DOM EVENTS
+
+// - Events are the signals that something has occurred (user input/actions) and a particular action is carried out
+
+// 1) Mouse Events
+// - only executes a single action
+
+// • onclick 
+// - here we write the function we want to execute after element is clicked
+
+// for e.g
+let btn = document.querySelector('button');
+btn.onclick = function(){
+    console.log("Button was clicked!");
+}
+
+
+
+// • onmouseenter
+// - here our action executes right after user's mouse enters an range of element or go on a element
+
+// for e.g
+let b = document.querySelector('button');
+b.onmouseenter = postliked;
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// 2) Event Listeners
+// - executes multiple action
+
+// syntax
+// - element.addEventListener(event , callback)
+
+// for e.g
+btn.addEventListener("click",function(){
+    console.log("Button CLicked");
+    console.log("Post Was Liked");
+})
+
+// using 'this' in Event Listeners
+// - when 'this' is used in a callback of event handler of something , it refers to that something
+
+// for e.g
+btn.addEventListener("click",function(){
+    console.dir(this);
+})
+
+// * event parameter
+// - it is a default parameter which describes which type of event carried out and shows it properties like code and key
+// - it is generally passed while writing a callback in EventListener
+
+// for e.g
+let input = document.querySelector('input');
+input.addEventListener("keydown",function(event){
+    console.dir(event);
+    console.log("Button was pressed!");
+})
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// 3) Keyboard Events
+// - each event describes a single interaction between the user and a key 
+
+// • keydown
+// - triggers event when a key is pressed
+
+// • keyup
+// - triggers event when a key is released
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// 4) Form Events
+
