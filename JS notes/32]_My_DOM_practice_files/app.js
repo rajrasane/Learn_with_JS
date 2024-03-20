@@ -92,3 +92,17 @@ let btn = document.querySelector("button");
 //     console.dir(event);
 //     console.log("Button was pressed!");
 // })
+
+
+let form = document.querySelector('form');
+form.addEventListener('submit',function(){
+    alert("Form Submitted!")
+});
+
+let input = document.querySelector('input');
+let forminfo = document.querySelector('form');
+forminfo.addEventListener('submit',function(event){
+    event.preventDefault();
+    console.log(`Your Registered Name is ${input.value}`);
+});
+
