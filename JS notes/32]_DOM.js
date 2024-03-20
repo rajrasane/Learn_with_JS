@@ -157,6 +157,7 @@ document.createElement('p');
 
 // - Events are the signals that something has occurred (user input/actions) and a particular action is carried out
 
+
 // 1) Mouse Events
 // - only executes a single action
 
@@ -199,6 +200,8 @@ btn.addEventListener("click",function(){
 btn.addEventListener("click",function(){
     console.dir(this);
 })
+
+//---------------------------------------------------------------------------------------------------------------------------------------
 
 // * event parameter
 // - it is a default parameter which describes which type of event carried out and shows it properties like code and key
