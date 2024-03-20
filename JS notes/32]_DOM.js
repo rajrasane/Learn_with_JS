@@ -246,6 +246,6 @@ let inputf = document.querySelector('input');
 let forminfo = document.querySelector('form');
 forminfo.addEventListener('submit',function(event){
     event.preventDefault();
-    console.log(`Your Registered Name is ${this.value}`);
+    console.log(`Your Registered Name is ${inputf.value}`);
 });
 
