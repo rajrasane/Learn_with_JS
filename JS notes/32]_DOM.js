@@ -228,4 +228,24 @@ input.addEventListener("keydown",function(event){
 //---------------------------------------------------------------------------------------------------------------------------------------
 
 // 4) Form Events
+// - events occurs after performing actions in a form
+
+// • submit
+// - The submit event fires when a <form> is submitted.
+
+// for eg
+let form = document.querySelector('form');
+form.addEventListener('submit',function(){
+    alert("Form Submitted!")
+});
+
+// * Extracting Form Data
+
+// for e.g
+let inputf = document.querySelector('input');
+let forminfo = document.querySelector('form');
+forminfo.addEventListener('submit',function(event){
+    event.preventDefault();
+    console.log(`Your Registered Name is ${this.value}`);
+});
 
