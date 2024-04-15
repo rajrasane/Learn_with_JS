@@ -60,25 +60,25 @@
 
 // Activity
 
-let btn = document.querySelector("button");
+// let btn = document.querySelector("button");
 
-btn.addEventListener("click",function(){
-    let h3 = document.querySelector('h3');
-    h3.innerText = randomcolor();
-    console.log("Color Updated!");
-    let div = document.querySelector('div');
-    div.style.backgroundColor = randomcolor();
-})
+// btn.addEventListener("click",function(){
+//     let h3 = document.querySelector('h3');
+//     h3.innerText = randomcolor();
+//     console.log("Color Updated!");
+//     let div = document.querySelector('div');
+//     div.style.backgroundColor = randomcolor();
+// })
 
 
-function randomcolor(){
-    let r = Math.floor(Math.random()*255);
-    let g = Math.floor(Math.random()*255);
-    let b = Math.floor(Math.random()*255);
+// function randomcolor(){
+//     let r = Math.floor(Math.random()*255);
+//     let g = Math.floor(Math.random()*255);
+//     let b = Math.floor(Math.random()*255);
 
-    let color = `rgb(${r},${g},${b})`;
-    return color;
-}
+//     let color = `rgb(${r},${g},${b})`;
+//     return color;
+// }
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
@@ -94,15 +94,30 @@ function randomcolor(){
 // })
 
 
-let form = document.querySelector('form');
-form.addEventListener('submit',function(){
-    alert("Form Submitted!")
-});
+// let form = document.querySelector('form');
+// form.addEventListener('submit',function(){
+//     alert("Form Submitted!")
+// });
 
-let input = document.querySelector('input');
-let forminfo = document.querySelector('form');
-forminfo.addEventListener('submit',function(event){
-    event.preventDefault();
-    console.log(`Your Registered Name is ${input.value}`);
-});
+// let input = document.querySelector('input');
+// let forminfo = document.querySelector('form');
+// forminfo.addEventListener('submit',function(event){
+//     event.preventDefault();
+//     console.log(`Your Registered Name is ${input.value}`);
+// });
 
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Activity - Creating a to do app
+
+let inp = document.querySelector("input");
+let btn = document.querySelector("button");
+let ul = document.querySelector("ul");
+
+btn.addEventListener("click",function(){
+    let item  = document.createElement("li");
+    item.innerText = inp.value;
+    ul.appendChild(item);
+    console.log(inp.value);
+    inp.value = "";
+});
