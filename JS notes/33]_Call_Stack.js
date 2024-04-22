@@ -54,5 +54,7 @@ three();
 // It interrupts the call stack at that specific point, allowing you to inspect variables, step through code, 
 // and identify issues by examining the current state of the call stack.
 
+// - It is present in source section of browser inspect .
+
 //---------------------------------------------------------------------------------------------------------------------------------------
 
