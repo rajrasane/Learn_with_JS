@@ -39,6 +39,20 @@ three();
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
+// Explaination :-
+
 // - Consider a Imaginary Stack of functions , the last called function is stored in this stack at bottom and if there exists called 
 // functions within the last called function then they added after simultaneously above the last one , when the particular called function has executed 
 // it's procedure then consider it is removed from the stack , this happens until the last called function in the stack is executed
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+
+// Breakpoint
+
+// - A breakpoint is a designated spot in your code where the debugger pauses execution. 
+// It interrupts the call stack at that specific point, allowing you to inspect variables, step through code, 
+// and identify issues by examining the current state of the call stack.
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
