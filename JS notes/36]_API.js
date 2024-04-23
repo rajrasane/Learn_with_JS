@@ -46,3 +46,18 @@ async function getfacts(){
         console.log("Error - ",err);
     }
 }
+
+// using Axios
+
+// - It is a Library used to make HTTP requests 
+// - It returns data directly so in this we don't parse the response we get fron API like fetch
+
+async function getfacts2(){
+    try{
+        let res = await axios.get(url);
+        console.log(res.data.fact);
+    }
+    catch(err){
+        console.log("Error - ",err);
+    }
+}
