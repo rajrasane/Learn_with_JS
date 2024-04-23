@@ -47,3 +47,149 @@
 
 // -  Promises are objects used in JavaScript for asynchronous programming. They represent the eventual completion or failure of an asynchronous operation,
 //  and its resulting value.
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// e.g of a callback hell
+
+function savetoDb (data,success,failure){
+    let internetSpeed = Math.floor(Math.random()*10)+1;
+    if(internetSpeed>4){
+        success();
+    }
+    else{
+        failure();
+    }
+}
+
+savetoDb(
+    "Name : Raj Rasane",
+    ()=>{
+    console.log("Success 1 : Data1 was Saved!");
+    savetoDb(
+        "Class : FYBCS",
+        ()=>{
+            console.log("Success 2 : Data2 was saved!");
+            savetoDb(
+                "Div : A",
+                ()=>{
+                    console.log("Success 3 : Data3 was saved!");
+                },
+                ()=>{
+                    console.log("Failure 3 : Weak Connection.Data was not saved!")
+                }
+            )
+        },
+        ()=>{
+            console.log("Failure2 : Weak Connection.Data was not saved!");
+        }
+    )
+},
+    ()=>{
+    console.log("Weak Connection.Data was not saved!");
+})
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// States in Promises :-
+
+// - Pending: Initial state, neither fulfilled nor rejected.
+// - Fulfilled (Resolved): The operation completed successfully.
+// - Rejected: The operation failed.
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Syntax for Creating a promise :
+
+// const myPromise = new Promise((resolve, reject) => {
+//     // Asynchronous operation
+//     if (/* operation is successful */) {
+//         resolve(result);
+//     } else {
+//         reject(error);
+//     }
+// });
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// for e.g
+
+function savetodb (){
+    return new Promise((resolve, reject) => {
+        let internetSpeed = Math.floor(Math.random()*10);
+        if(internetSpeed > 4){
+            resolve("Your Data was Saved!");
+        }
+        else{
+            reject("Weak Connection!,Data not saved!");
+        }
+    })
+}
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Promise Methods :- 
+
+// then() and catch() Methods :
+
+// for e.g :- 
+savetodb("Name : Raj Rasane")
+.then(()=>{
+    console.log("Promise was Resolved");
+})
+.catch(()=>{
+    console.log("Promise was Rejected");
+})
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Chaining Promises
+// - It means carrying out other tasks if 1st one is carried out successfully .
+
+// for e.g
+savetodb("Class : FYBCS")
+.then(()=>{
+    console.log("Promise1 was Resolved");
+    return savetodb("Div : A");
+})
+.then(()=>{
+    console.log("Promise2 was Resolved");
+})
+.catch(()=>{
+    console.log("Some Promises Rejected");
+})
+
+//---------------------------------------------------------------------------------------------------------------------------------------
+
+// Final Example of Promise using all concepts
+
+let h1 = document.querySelector("h1");
+
+function changecolour(color,delay){
+    return new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            h1.style.color = color;
+            resolve("Color Changed Successfully");
+        },delay)
+    });
+}
+
+changecolour("red",1000)
+.then(()=>{
+    console.log("Red Color was successfully applied!");
+    return changecolour("orange",1000);
+})
+.then(()=>{
+    console.log("Orange Color was successfully applied!");
+    return changecolour("blue",1000);
+})
+.then(()=>{
+    console.log("Blue Color was successfully applied!");
+    return changecolour("green",1000);
+})
+.then(()=>{
+    console.log("Green Color was successfully applied!");
+})
+.catch(()=>{
+    console.log("Some promises were Rejected!")
+})
