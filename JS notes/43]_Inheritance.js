@@ -10,9 +10,9 @@
 // - `extends` keyword creates a new class that inherits from another class, forming a parent-child relationship.
 
 // syntax:
-// class ChildClassName extends ParentClassName {
-//     // Class body
-//   }
+class ChildClassName extends ParentClassName {
+    // Class body
+  }
 
 
 
@@ -20,12 +20,12 @@
 // - `super` keyword in class constructors calls parent class methods and allows access to parent object functions.
 
 // syntax:
-// class ChildClassName extends ParentClassName {
-//     constructor() {
-//       super(); // Call the parent class constructor
-//       // Other constructor logic
-//     }
-//   }
+class ChildClassName extends ParentClassName {
+    constructor() {
+      super(); // Call the parent class constructor
+      // Other constructor logic
+    }
+  }
 
 //---------------------------------------------------------------------------------------------------------------------------------------
 
