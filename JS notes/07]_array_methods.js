@@ -44,7 +44,7 @@ console.log(arr4);
 //---------------------------------------------------------------------------------------------------------------------------------------
 
 // 5) IndexOf
-// - returns index of something present in array , if not gives -1
+// - returns index of something present in array , if not present, then returns/gives -1
 
 // for e.g
 let arr5 = ["Java","C","Python"];
