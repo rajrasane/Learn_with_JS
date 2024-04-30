@@ -62,7 +62,7 @@ console.dir(parachange); //after :- Creation
 
 
 
-// • querySelector()
+// • querySelector()  //<- we will be mostly using this while working 
 // - Allows us to use any CSS selector 
 
 // for e.g
@@ -70,7 +70,7 @@ document.querySelector('p'); // selects first p element
 document.querySelector('#description'); // selects first element with id = description
 document.querySelector('.oldImg'); // selects first element with class = olImg 
 
-document.querySelector("h1"); // selects all h1 elements 
+document.querySelectorAll("h1"); // selects all h1 elements 
 
 document.querySelectorAll("div a"); // selects all anchors inside the div and returns a nodelist
 

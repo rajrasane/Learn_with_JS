@@ -24,7 +24,7 @@ let newarr1 = [...arr1];
 console.log(newarr1);
 
 let nname = [..."Vishwakarma"];
-console.log(nname);
+console.log(nname); // Output: ['V', 'i', 's', 'h', 'w', 'a', 'k', 'a', 'r', 'm', 'a']
 
 let odd = [1,3,5,7,9];
 let even = [2,4,6,8,10];
