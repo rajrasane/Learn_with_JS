@@ -3,4 +3,4 @@
 
 <script src="filename.js" ></script>
 
-// before <body> tag int HTML
+// before <body> tag in HTML
