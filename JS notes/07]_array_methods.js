@@ -81,7 +81,7 @@ console.log(order.reverse());
 
 // 9) slice
 // - copies a selected portion of an array and doesn't make change in original array
-// - we startpoint and endpoint as Index , remember that endpoint's element is not included while returning array
+// - we provide startpoint and endpoint as Index , remember that endpoint's element is not included while returning array
 
 // for e.g
 let Names = ["Raj","Anurag","Sumit","Prathamesh"];
