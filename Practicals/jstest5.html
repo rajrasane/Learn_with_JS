@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript</title>
+</head>
+<body>
+    <div id="container">
+        <input type="button" value="display answer" onclick="displayFactorial()"/>
+    </div>
+    <script>
+        let a = prompt("Enter number to have factorial of : ")
+        a = parseInt(a);
+        function fact(a){
+            if(a==1){
+                return 1
+            }
+            return a * fact(a-1);
+        }
+        function displayFactorial(){
+            let result = fact(a);
+            alert(`Factorial of ${a} is : ${result}`);
+        }
+
+    </script>
+</body>
+</html>
