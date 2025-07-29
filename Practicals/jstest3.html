@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript</title>
+</head>
+<body>
+    <div id="mycontainer">
+    </div>
+    <script>
+        function add(a, b, myDiv) {
+            myDiv.innerHTML = `Addition of a and b is : ${a + b}<br>`;
+        }
+
+        function sub(a, b, myDiv) {
+            myDiv.innerHTML += `Substraction of a and b is : ${a - b}<br>`;
+        }
+
+        function mult(a, b, myDiv) {
+            myDiv.innerHTML += `Multiplication of a and b is : ${a * b}<br>`;
+        }
+
+        function div(a, b, myDiv) {
+            myDiv.innerHTML += `Division of a and b is : ${a / b}`;
+        }
+
+        function arithmetic() {
+            let myDiv = document.getElementById("mycontainer");
+            let a = 10;
+            let b = 20;
+            add(a, b, myDiv);
+            sub(a, b, myDiv);
+            mult(a, b, myDiv);
+            div(a, b, myDiv);
+        }
+
+        arithmetic();
+
+    </script>
+</body>
+</html>
