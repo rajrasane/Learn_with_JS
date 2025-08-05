@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+
+     <form method="get" action="http://localhost/PHP/demo.php" onsubmit="return validateForm()">
+        Enter the Name : 
+        <input type="text" name="sname" id="sname" required >
+        <input type="submit" value="Submit">
+
+     </form>
+    <script>
+        function validateForm() {
+            const sname = document.getElementById("sname").value.trim();
+            if(!sname){
+                alert("Invalid");
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
