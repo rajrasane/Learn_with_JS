@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Membership Form</title>
+</head>
+<body>
+    <form>
+        <div >
+            Enter username: <input type="text" name="uname" id="uname"> <br>
+            Enter password: <input type="password" name="upass" id="upass"> <button type="button" id="togglebtn" onclick="disppass()">Show</button> <br>
+            <button type="submit" onclick="validate()">Submit</button>
+        </div>
+    </form>
+
+   <script>
+       function validate() {
+           const usname = document.getElementById("uname").value.trim();
+           const pass = document.getElementById("upass").value;
+
+           if (!usname) {
+               alert('Invalid Username!');
+               return false;
+           }
+
+           if (!checkpass(pass)) {
+               alert("Invalid Password. It should have at least 8 characters, including one uppercase letter, one lowercase letter, one digit, and one special character.");
+               return false;
+           }
+
+           alert("Thank you " + usname + ", you have successfully submitted the form.");
+           return true;
+       }
+
+       function checkpass(password) {
+           const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+           return passwordRegex.test(password);
+       }
+
+       function disppass() {
+           let ps = document.getElementById("upass");
+           let btn = document.getElementById("togglebtn");
+              if (ps.type === "password") {
+                ps.type = "text";
+                btn.innerHTML = "Hide"
+              } else {
+                ps.type = "password";
+                btn.innerHTML = "Show"
+              }
+
+       }
+   </script>
+</body>
+</html>
